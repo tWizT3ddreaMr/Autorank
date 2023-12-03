@@ -22,10 +22,6 @@ public class SetCommand extends AutorankCommand {
     }
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (!(sender instanceof Player)){
-            AutorankTools.consoleDeserialize(Lang.YOU_ARE_A_ROBOT.getConfigValue());
-            return true;
-        }
         if (args.length < 3) {
             AutorankTools.sendDeserialize(sender, Lang.INVALID_FORMAT.getConfigValue(this.getUsage()));
             return true;
